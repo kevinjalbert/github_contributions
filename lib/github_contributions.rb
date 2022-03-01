@@ -6,7 +6,7 @@ require "octokit"
 require "hashie"
 require "digest"
 
-Dir.glob(File.dirname(__FILE__) + '/github_contributions/**/*.rb') { |file| require file  }
+Dir.glob(File.dirname(__FILE__) + '/github_contributions/**/*.rb').sort.each { |file| require file }
 
 module GithubContributions
   class << self
